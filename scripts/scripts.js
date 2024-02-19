@@ -33,8 +33,8 @@ for (let index = 0; index < seats.length; index++) {
             p2.innerText = "";
             p3.innerText = "";
             seatLeft.innerText = 16 ;
-            
-
+            document.getElementById("rest-total").innerText = 0;
+            document.getElementById("discount-price").innerText = 0 ;
         })
 
         const addedSeat = document.getElementById("added-seat")
