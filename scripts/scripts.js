@@ -62,19 +62,23 @@ applyBtn.addEventListener('click' , function(){
         if(couponCode === "NEW15"){
             const discountElement = document.getElementById("discount-price")
             const discountAmount = totalPrice * 15 /100 ;
-            discountElement.innerText = discountAmount ;
+            discountElement.innerText = discountAmount.toFixed(2) ;
 
-            const grandTotal = totalPrice - discountAmount;
+            const grandTotal = totalPrice - discountAmount.toFixed(2);
             document.getElementById("rest-total").innerText = grandTotal ;
+
+            document.getElementById("coupon-input").value = "" ;
 
         }
         else{
-            alert("Invalid coupon code.")
+            alert("Invalid coupon code.");
+            document.getElementById("coupon-input").value = "" ;
         }
 
     }
     else{
-        alert("Please purchase 4 seat to get coupon.")
+        alert("Please purchase 4 seat to get coupon.");
+        document.getElementById("coupon-input").value = "" ;
     }
     
 })
