@@ -40,6 +40,19 @@ for (let index = 0; index < seats.length; index++) {
         count++
         addedSeat.innerHTML= count ;
 
+        // stop if click more than 4
+
+        if(count > 4){
+            alert("You can't select more than four seat.");
+            removeBackgroundColorById(title);
+            totalCountedPrice.innerText = "" ;
+            addedSeat.innerHTML= 0 ;
+            p1.innerText = "";
+            p2.innerText = "";
+            p3.innerText = "";
+
+        }
+
         const seatLeft = document.getElementById("seats-left")
         const countSeatLeft = parseFloat(seatLeft.innerText) ;
         
