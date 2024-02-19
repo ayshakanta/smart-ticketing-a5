@@ -95,7 +95,7 @@
                         <img src="images/cupon-devider.png" alt="">
                     </div>
                     <div>
-                        <h4 class="font-bold text-2xl">New15</h4>
+                        <h4 class="font-bold text-2xl">NEW15</h4>
                         <p>Coupon Code</p>
                     </div>
                 </div>
@@ -257,18 +257,21 @@
                                     <hr>
                                     <ul class="flex justify-between font-semibold">
                                         <li>Total Price</li>
-                                        <li>BDT <span>0</span></li>
+                                        <li>BDT <span id="total-price">0</span></li>
                                     </ul>
                                 </div>
 
+                                <p class="p-4">Discount Price: <span id="discount-price">0</span></p>
+
                                 <div class="join p-4">
-                                    <input class="input input-bordered join-item" placeholder="Have any copupon" />
-                                    <button class="btn join-item bg-[#1DD100] text-white">Apply</button>
+                                    
+                                    <input id="coupon-input" class="input input-bordered join-item" placeholder="Have any coupon" />
+                                    <button id="apply-btn" class="btn join-item bg-[#1DD100] text-white">Apply</button>
 
                                 </div>
                                 <ul class="flex justify-between font-semibold p-4">
                                     <li>Grand Total</li>
-                                    <li>BDT <span>0</span></li>
+                                    <li>BDT <span id="rest-total">0</span></li>
                                 </ul>
 
                             </div>

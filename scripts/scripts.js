@@ -8,6 +8,7 @@ const classTitle = 'Economy' ;
 const priceTitle = '550' ;
 
 let clickCount = 0 ;
+let totalPrice = 0 ;
 
 
 const seats = document.querySelectorAll(".seats");
@@ -38,8 +39,43 @@ for (let index = 0; index < seats.length; index++) {
         const p3 = document.createElement("p")
         p3.innerText = priceTitle ;
         priceClass.appendChild(p3)
-        
+
+        // total price
+
+        const price = parseInt(priceTitle)
+        totalPrice += price
+
+        const totalCountedPrice = document.getElementById("total-price")
+        totalCountedPrice.innerText = totalPrice
     })
     
 }
+
+const applyBtn = document.getElementById("apply-btn");
+applyBtn.addEventListener('click' , function(){
+
+    const couponElement = document.getElementById("coupon-input").value ;
+    const couponCode = couponElement.split("").join("").toUpperCase();
+    console.log(couponCode)
+
+    if(totalPrice >= 2200){
+        if(couponCode === "NEW15"){
+            const discountElement = document.getElementById("discount-price")
+            const discountAmount = totalPrice * 15 /100 ;
+            discountElement.innerText = discountAmount ;
+
+            const grandTotal = totalPrice - discountAmount;
+            document.getElementById("rest-total").innerText = grandTotal ;
+
+        }
+        else{
+            alert("Invalid coupon code.")
+        }
+
+    }
+    else{
+        alert("Please purchase 4 seat to get coupon.")
+    }
+    
+})
 
