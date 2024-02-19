@@ -32,6 +32,7 @@ for (let index = 0; index < seats.length; index++) {
             p1.innerText = "";
             p2.innerText = "";
             p3.innerText = "";
+            seatLeft.innerText = 16 ;
             
 
         })
@@ -54,7 +55,10 @@ for (let index = 0; index < seats.length; index++) {
         }
 
         const seatLeft = document.getElementById("seats-left")
-        const countSeatLeft = parseFloat(seatLeft.innerText) ;
+        const seatLeftText = seatLeft.innerText ;
+        const currentSeat = parseInt(seatLeftText);
+        const newSeat = currentSeat - 1 ;
+        seatLeft.innerText = newSeat ;
         
 
 
