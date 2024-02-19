@@ -58,7 +58,7 @@
         </div>
         <!-- banner section -->
         <div>
-            <div class="hero min-h-screen rounded-2xl" style="background-image: url(/images/banner.png);">
+            <div class="hero min-h-screen rounded-2xl" style="background-image: url(./images/banner.png);">
                 <!-- <div class="hero-overlay "></div> -->
                 <div class="hero-content text-center text-neutral-content">
                     <div class="">
@@ -71,7 +71,8 @@
                         <p class="mb-5 max-w-lg">P Paribahan is a convenient and efficient way to book your bus travel.
                             These websites offer a user-friendly platform where you can easily search for bus routes,
                             compare prices, and book your tickets online.</p>
-                        <button class="btn btn-primary bg-[#1DD100] border-none text-black font-bold">Buy
+                        <button onclick="buyTickets()"
+                            class="btn btn-primary bg-[#1DD100] border-none text-black font-bold">Buy
                             Tickets</button>
                     </div>
                 </div>
@@ -120,7 +121,8 @@
         </section>
 
     </header>
-    <main class="mt-20  bg-[#F7F8F8] rounded-t-3xl border-t-2 border-t-[#1DD100]">
+    <!-- paribahan section -->
+    <main id="paribahan-section" class="mt-20  bg-[#F7F8F8] rounded-t-3xl border-t-2 border-t-[#1DD100]">
         <div class="p-20  ">
             <div class="flex flex-col items-center justify-center">
                 <div class="flex flex-col items-center justify-center space-y-6 pb-20">
@@ -193,37 +195,37 @@
                             <div class="flex gap-6 mt-6">
                                 <p class="pt-2">A</p>
                                 <div class="">
-                                    <button class="btn">A1</button>
-                                    <button class="btn">A2</button>
-                                    <button class="btn">A3</button>
-                                    <button class="btn">A4</button>
+                                    <button id="A1" class="btn seats"><span>A1</span></button>
+                                    <button id="A2" class="btn seats"><span>A2</span></button>
+                                    <button id="A3" class="btn seats"><span>A3</span></button>
+                                    <button id="A4" class="btn seats"><span>A4</span></button>
                                 </div>
                             </div>
                             <div class="flex gap-6 mt-6">
                                 <p class="pt-2">B</p>
                                 <div>
-                                    <button class="btn">B1</button>
-                                    <button class="btn">B2</button>
-                                    <button class="btn">B3</button>
-                                    <button class="btn">B4</button>
+                                    <button id="B1" class="btn seats"><span>B1</span></button>
+                                    <button id="B2" class="btn seats"><span>B2</span></button>
+                                    <button id="B3" class="btn seats"><span>B3</span></button>
+                                    <button id="B4" class="btn seats"><span>B4</span></button>
                                 </div>
                             </div>
                             <div class="flex gap-6 mt-6">
                                 <p class="pt-2">C</p>
                                 <div>
-                                    <button class="btn">C1</button>
-                                    <button class="btn">C2</button>
-                                    <button class="btn">C3</button>
-                                    <button class="btn">C4</button>
+                                    <button id="C1" class="btn seats"><span>C1</span></button>
+                                    <button id="C2" class="btn seats"><span>C2</span></button>
+                                    <button id="C3" class="btn seats"><span>C3</span></button>
+                                    <button id="C4" class="btn seats"><span>C4</span></button>
                                 </div>
                             </div>
                             <div class="flex gap-6 mt-6">
                                 <p class="pt-2">D</p>
                                 <div>
-                                    <button class="btn">D1</button>
-                                    <button class="btn">D2</button>
-                                    <button class="btn">D3</button>
-                                    <button class="btn">D4</button>
+                                    <button id="D1" class="btn seats"><span>D1</span></button>
+                                    <button id="D2" class="btn seats"><span>D2</span></button>
+                                    <button id="D3" class="btn seats"><span>D3</span></button>
+                                    <button id="D4" class="btn seats"><span>D4</span></button>
                                 </div>
                             </div>
                         </div>
@@ -236,35 +238,22 @@
                         <div>
                             <div class="bg-[#F7F8F8] rounded-lg mt-4">
                                 <div class="overflow-x-auto p-4">
-                                    <table class="table">
-                                        <!-- head -->
-                                        <thead>
-                                            <tr class="font-medium text-black">
+                                    <div class="flex justify-between">
+                                        <div>
+                                            <h3 class="font-medium text-black">Seat <span>0</span>
+                                            </h3>
+                                            <span id="seat-details-container"></span>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-medium text-black">Class</h3>
+                                            <span id="economy-class"></span>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-medium text-black">Price</h3>
+                                            <span id="price-title"></span>
+                                        </div>
+                                    </div>
 
-                                                <th>Seat <span>0</span></th>
-                                                <th>class</th>
-                                                <th>price</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <!-- row 1 -->
-                                            <tr>
-
-                                                <td>C2</td>
-                                                <td>Economy</td>
-                                                <td>550</td>
-                                            </tr>
-                                            <!-- row 2 -->
-                                            <tr>
-
-                                                <td></td>
-                                                <td>Economy</td>
-                                                <td>550</td>
-                                            </tr>
-
-
-                                        </tbody>
-                                    </table>
                                     <hr>
                                     <ul class="flex justify-between font-semibold">
                                         <li>Total Price</li>
